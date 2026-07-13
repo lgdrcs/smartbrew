@@ -10,7 +10,7 @@ if (!$username) {
     exit();
 }
 
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../db.php';
 
 // Fetch UUID from database
 $sql = "SELECT UNIQUE_QR FROM CUSTOMER_LOGIN WHERE USERNAME = ?";
@@ -43,7 +43,7 @@ if (!$uuid) {
 <body>
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="SmartBrew Logo">
+            <img src="../Assets/kape.png" alt="SmartBrew Logo">
             <div class="logo-text">SmartBrew Cafè</div>
         </div>
         <div class="nav-links">

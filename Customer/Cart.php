@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../db.php';
 
 // Ensure user is logged in
 if (!isset($_SESSION['customer_id'])) {
@@ -93,7 +93,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <body>
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="SmartBrew Logo">
+            <img src="../Assets/kape.png" alt="SmartBrew Logo">
             <div class="logo-text">SmartBrew Cafè</div>
         </div>
         <div class="nav-links">

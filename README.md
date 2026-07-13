@@ -37,7 +37,7 @@ The app runs on plain PHP (no framework) and stores data in a [Supabase](https:/
    ```
    php -S localhost:8000
    ```
-   Then open `http://localhost:8000/DashboardSB.php`.
+   Then open `http://localhost:8000/Customer/DashboardSB.php`.
 
 ## Admin access
 
@@ -46,8 +46,8 @@ log in at `Admin/Admin.php`.
 
 ## Project structure
 
-- Root (`Login.php`, `Register.php`, `Menu.php`, `Cart.php`, `Checkout.php`, `QR.php`,
-  `Order_Receipt.php`) — customer-facing pages.
+- `Customer/` — customer-facing pages (`Login.php`, `Register.php`, `Menu.php`, `Cart.php`,
+  `Checkout.php`, `QR.php`, `Order_Receipt.php`, `Logout.php`, `DashboardSB.php`).
 - `Admin/` — admin login, dashboard, transactions list, and PDF report generation.
 - `db.php` — shared database connection, reads config from `.env`.
 - `supabase_schema.sql` — table definitions to run once in Supabase.

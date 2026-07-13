@@ -17,7 +17,7 @@ $loggedIn = isset($_SESSION['customer_id']); // Check if the user is logged in
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="DLSU Logo">
+            <img src="../Assets/kape.png" alt="DLSU Logo">
             <div class="logo-text">SmartBrew Cafè</div>
         </div>
         <div class="nav-links">
@@ -56,7 +56,7 @@ $loggedIn = isset($_SESSION['customer_id']); // Check if the user is logged in
             </form>
         </div>
         <div class="hero-image">
-            <img src="Assets/Hero.png" alt="Coffee Cup">
+            <img src="../Assets/Hero.png" alt="Coffee Cup">
         </div>
     </section>
 

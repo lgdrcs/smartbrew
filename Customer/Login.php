@@ -2,7 +2,7 @@
 session_start();
 
 // Database connection
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../db.php';
 
 $error = "";
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="SmartBrew Logo">
+            <img src="../Assets/kape.png" alt="SmartBrew Logo">
             <div class="logo-text">SmartBrew Cafè Login</div>
         </div>
         <div class="nav-links">

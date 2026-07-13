@@ -6,7 +6,7 @@ if (!isset($_SESSION['customer_id'])) {
     exit();
 }
 
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../db.php';
 
 $customer_id = $_SESSION['customer_id'];
 
@@ -61,7 +61,7 @@ if (in_array($paymentMethod, ['gcash', 'maya'])) {
             $ext = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
 
             $allowed = ['jpg', 'jpeg', 'png', 'gif'];
-            $dir = './uploads/receipts/';
+            $dir = __DIR__ . '/../uploads/receipts/';
             if (!is_dir($dir)) mkdir($dir, 0755, true);
 
             if (in_array($ext, $allowed)) {
@@ -162,7 +162,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <body>
 <div class="navbar">
     <div class="logo-container">
-        <img src="Assets/kape.png" alt="SmartBrew Logo">
+        <img src="../Assets/kape.png" alt="SmartBrew Logo">
         <div class="logo-text">SmartBrew Cafe</div>
     </div>
     <div class="nav-links">

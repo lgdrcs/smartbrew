@@ -28,7 +28,7 @@ $order = $_SESSION['order_receipt'];
 <body>
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="SmartBrew Logo">
+            <img src="../Assets/kape.png" alt="SmartBrew Logo">
             <div class="logo-text">SmartBrew Cafè</div>
         </div>
     </div>

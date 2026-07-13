@@ -2,15 +2,15 @@
 session_start();
 $loggedIn = isset($_SESSION['customer_id']); // Check if the user is logged in
 
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/../db.php';
 
 // Sample menu items
 $menuItems = [
-    ["id" => 1, "name" => "Caramel Machiato", "category" => "coffee", "price" => 150, "image" => "Assets/cm.png"],
-    ["id" => 2, "name" => "Vietnamese", "category" => "coffee", "price" => 150, "image" => "Assets/vietnam.png"],
-    ["id" => 3, "name" => "Hot-Chocolate", "category" => "noncoffee", "price" => 100, "image" => "Assets/Hotc.png"],
-    ["id" => 4, "name" => "Brownies", "category" => "pastries", "price" => 50, "image" => "Assets/Brown.png"],
-    ["id" => 5, "name" => "Cookies", "category" => "pastries", "price" => 55, "image" => "Assets/Cok.png"],
+    ["id" => 1, "name" => "Caramel Machiato", "category" => "coffee", "price" => 150, "image" => "../Assets/cm.png"],
+    ["id" => 2, "name" => "Vietnamese", "category" => "coffee", "price" => 150, "image" => "../Assets/vietnam.png"],
+    ["id" => 3, "name" => "Hot-Chocolate", "category" => "noncoffee", "price" => 100, "image" => "../Assets/Hotc.png"],
+    ["id" => 4, "name" => "Brownies", "category" => "pastries", "price" => 50, "image" => "../Assets/Brown.png"],
+    ["id" => 5, "name" => "Cookies", "category" => "pastries", "price" => 55, "image" => "../Assets/Cok.png"],
 ];
 
 // Get logged-in customer ID
@@ -69,7 +69,7 @@ if ($customer_id) {
 <body>
     <div class="navbar">
         <div class="logo-container">
-            <img src="Assets/kape.png" alt="SmartBrew Logo">
+            <img src="../Assets/kape.png" alt="SmartBrew Logo">
             <div class="logo-text">SmartBrew Cafè Dashboard</div>
         </div>
         <div class="nav-links">
