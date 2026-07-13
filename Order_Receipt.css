@@ -1,0 +1,168 @@
+/* order_receipt.css */
+:root {
+    --primary-color: #493628;
+    --secondary-color: #555;
+    --light-color: #F8EDE3;
+    --background-color: #ffffff;
+}
+
+/* ===== SCREEN STYLES ===== */
+html, body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, var(--light-color), var(--background-color));
+    color: var(--secondary-color);
+
+    /* Center the receipt on screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar (screen only) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: -20px;
+}
+
+.navbar .logo-container img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.navbar .logo-container .logo-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Receipt card */
+.order-receipt {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    max-width: 600px;
+    width: calc(100% - 40px);
+
+    /* leave space for fixed navbar */
+    margin-top: 100px;
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.order-receipt h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.order-receipt p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Buttons / links */
+.order-receipt .back-to-dashboard {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.order-receipt .back-to-dashboard:hover {
+    background-color: #444;
+}
+
+.print-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #533105dd;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #7c681e81;
+}
+
+/* ===== PRINT STYLES (ONE PAGE) ===== */
+@media print {
+
+    /* A4 + controlled margins */
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
+    /* Remove flex/100vh layout that creates extra pages */
+    html, body {
+        background: #fff !important;
+        display: block !important;
+        min-height: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide anything you don’t want printed */
+    .navbar,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Make receipt fill page naturally */
+    .order-receipt {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0% !important;
+        margin-top: 50% !important;
+
+        padding: 12mm !important;
+
+        box-shadow: none !important;
+        border-radius: 0 !important;
+
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* Slightly smaller to guarantee it fits 1 page */
+    .order-receipt h1 {
+        margin-bottom: 10px !important;
+    }
+
+    .order-receipt p {
+        font-size: 12pt !important;
+        margin-bottom: 6px !important;
+    }
+}

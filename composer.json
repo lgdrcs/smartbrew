@@ -1,0 +1,12 @@
+{
+    "name": "cslag/smartbrew",
+    "authors": [
+        {
+            "name": "Christian Laguador",
+            "email": "christianlaguadorr@gmail.com"
+        }
+    ],
+    "require": {
+        "tecnickcom/tcpdf": "^6.10"
+    }
+}
