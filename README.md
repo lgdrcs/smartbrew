@@ -57,3 +57,6 @@ log in at `Admin/Admin.php`.
 
 - **Docker**: since config already lives in `.env`, containerizing later is just adding a
   `Dockerfile` + `docker-compose.yml` — no application code changes needed.
+
+## Author
+Christian Laguador — Computer Engineering graduate, Dubai, UAE https://www.linkedin.com/in/christian-laguador
